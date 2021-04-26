@@ -1,0 +1,15 @@
+<% @kitten.errors.full_messages.each do |msg| %>
+  <%= msg %><br>
+<% end %>
+
+<%= form_with model: @kitten do |f| %>
+  <%= f.label :name, "Enter kitten name"%>
+  <%= f.text_field :name %><br>
+  <%= f.label :age, "Enter kitten age"%>
+  <%= f.number_field :age %><br>
+  <%= f.label :cuteness, "Enter kitten cuteness"%>
+  <%= f.number_field :cuteness %><br>
+  <%= f.label :softness, "Enter kitten softness"%>
+  <%= f.number_field :softness %><br>
+  <%= f.submit %>
+<% end %>
